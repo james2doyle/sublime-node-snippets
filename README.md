@@ -13,6 +13,12 @@ The majority of snippets for node 10.26. There are **465** total right now.
 * press enter on "sublime-node-snippets"
 * watch it install
 
+## Using
+
+Pressing `.` (period) will end the snippet lookup.
+
+You will have better results if you pretend the period isn't needed. So if you are looking for `fs.readdir`, you would type `fsread` and you would see the results coming up.
+
 ## Snippet Categories
 
 * Assert
