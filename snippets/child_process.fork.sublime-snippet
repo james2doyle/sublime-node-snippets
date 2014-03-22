@@ -1,0 +1,9 @@
+<snippet>
+  <content><![CDATA[
+child_process.fork(${1:modulePath}, ${2:[args]}, ${3:[options]})${0}
+]]></content>
+  <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+  <tabTrigger>child_process.fork</tabTrigger>
+  <!-- Optional: Set a scope to limit where the snippet will trigger -->
+  <scope>source.js</scope>
+</snippet>

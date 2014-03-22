@@ -1,0 +1,9 @@
+<snippet>
+  <content><![CDATA[
+crypto.pbkdf2Sync(${1:password}, ${2:salt}, ${3:iterations}, ${4:keylen})${0}
+]]></content>
+  <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+  <tabTrigger>crypto.pbkdf2Sync</tabTrigger>
+  <!-- Optional: Set a scope to limit where the snippet will trigger -->
+  <scope>source.js</scope>
+</snippet>

@@ -1,0 +1,9 @@
+<snippet>
+  <content><![CDATA[
+request.write(${1:chunk}, ${2:[encoding]})${0}
+]]></content>
+  <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+  <tabTrigger>request.write</tabTrigger>
+  <!-- Optional: Set a scope to limit where the snippet will trigger -->
+  <scope>source.js</scope>
+</snippet>

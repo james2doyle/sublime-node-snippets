@@ -1,0 +1,9 @@
+<snippet>
+  <content><![CDATA[
+url.resolve(${1:from}, ${2:to})${0}os.tmpdir(${1:args})${0}
+]]></content>
+  <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+  <tabTrigger>url.resolve</tabTrigger>
+  <!-- Optional: Set a scope to limit where the snippet will trigger -->
+  <scope>source.js</scope>
+</snippet>

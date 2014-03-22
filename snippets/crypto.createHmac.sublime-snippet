@@ -1,0 +1,9 @@
+<snippet>
+  <content><![CDATA[
+crypto.createHmac(${1:algorithm}, ${2:key})${0}
+]]></content>
+  <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+  <tabTrigger>crypto.createHmac</tabTrigger>
+  <!-- Optional: Set a scope to limit where the snippet will trigger -->
+  <scope>source.js</scope>
+</snippet>

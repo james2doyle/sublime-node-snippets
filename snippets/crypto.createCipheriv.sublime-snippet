@@ -1,0 +1,9 @@
+<snippet>
+  <content><![CDATA[
+crypto.createCipheriv(${1:algorithm}, ${2:key}, ${3:iv})${0}
+]]></content>
+  <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+  <tabTrigger>crypto.createCipheriv</tabTrigger>
+  <!-- Optional: Set a scope to limit where the snippet will trigger -->
+  <scope>source.js</scope>
+</snippet>

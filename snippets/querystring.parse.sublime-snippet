@@ -1,0 +1,9 @@
+<snippet>
+  <content><![CDATA[
+querystring.parse(${1:str}, ${2:[sep]}, ${3:[eq]}, ${4:[options]})${0}
+]]></content>
+  <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+  <tabTrigger>querystring.parse</tabTrigger>
+  <!-- Optional: Set a scope to limit where the snippet will trigger -->
+  <scope>source.js</scope>
+</snippet>

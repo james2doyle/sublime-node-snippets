@@ -1,0 +1,9 @@
+<snippet>
+  <content><![CDATA[
+fs.open(${1:path}, ${2:flags}, ${3:[mode]}, ${4:callback})${0}
+]]></content>
+  <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+  <tabTrigger>fs.open</tabTrigger>
+  <!-- Optional: Set a scope to limit where the snippet will trigger -->
+  <scope>source.js</scope>
+</snippet>

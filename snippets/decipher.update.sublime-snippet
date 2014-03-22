@@ -1,0 +1,9 @@
+<snippet>
+  <content><![CDATA[
+decipher.update(${1:data}, ${2:[input_encoding]}, ${3:[output_encoding]})${0}
+]]></content>
+  <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+  <tabTrigger>decipher.update</tabTrigger>
+  <!-- Optional: Set a scope to limit where the snippet will trigger -->
+  <scope>source.js</scope>
+</snippet>

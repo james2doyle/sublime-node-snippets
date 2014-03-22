@@ -1,0 +1,9 @@
+<snippet>
+  <content><![CDATA[
+diffieHellman.setPrivateKey(${1:private_key}, ${2:[encoding]})${0}
+]]></content>
+  <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+  <tabTrigger>diffieHellman.setPrivateKey</tabTrigger>
+  <!-- Optional: Set a scope to limit where the snippet will trigger -->
+  <scope>source.js</scope>
+</snippet>

@@ -1,0 +1,9 @@
+<snippet>
+  <content><![CDATA[
+fs.watch(${1:filename}, ${2:[options]}, ${3:[listener]})${0}
+]]></content>
+  <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+  <tabTrigger>fs.watch</tabTrigger>
+  <!-- Optional: Set a scope to limit where the snippet will trigger -->
+  <scope>source.js</scope>
+</snippet>

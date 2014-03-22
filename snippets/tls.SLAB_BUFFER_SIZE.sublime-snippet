@@ -1,0 +1,10 @@
+<snippet>
+  <content><![CDATA[
+tls.SLAB_BUFFER_SIZE
+]]></content>
+  <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+  <tabTrigger>tls.SLAB_BUFFER_SIZE
+</tabTrigger>
+  <!-- Optional: Set a scope to limit where the snippet will trigger -->
+  <scope>source.js</scope>
+</snippet>

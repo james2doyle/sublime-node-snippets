@@ -1,0 +1,9 @@
+<snippet>
+  <content><![CDATA[
+tls.connect(${1:port}, ${2:[host]}, ${3:[options]}, ${4:[callback]})${0}
+]]></content>
+  <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+  <tabTrigger>tls.connect</tabTrigger>
+  <!-- Optional: Set a scope to limit where the snippet will trigger -->
+  <scope>source.js</scope>
+</snippet>

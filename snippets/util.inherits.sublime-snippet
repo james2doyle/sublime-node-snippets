@@ -1,0 +1,9 @@
+<snippet>
+  <content><![CDATA[
+util.inherits(${1:constructor}, ${2:superConstructor})${0}url.parse(${1:urlStr}, ${2:[parseQueryString]}, ${3:[slashesDenoteHost]})${0}
+]]></content>
+  <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+  <tabTrigger>util.inherits</tabTrigger>
+  <!-- Optional: Set a scope to limit where the snippet will trigger -->
+  <scope>source.js</scope>
+</snippet>
