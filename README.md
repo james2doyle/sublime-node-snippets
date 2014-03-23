@@ -1,7 +1,7 @@
 sublime-node-snippets
 =====================
 
-The majority of snippets for node 10.26. There are **465** total right now.
+The majority of snippets for node 10.26. There are **783** total right now.
 
 ## Installing
 
