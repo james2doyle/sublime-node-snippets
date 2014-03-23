@@ -1,6 +1,6 @@
 {
   "scope": [
-  "text.js - source - meta.tag, punctuation.definition.tag.begin"
+  "source.js"
   ],
 
   "completions": [

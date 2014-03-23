@@ -7,7 +7,7 @@
 // open our line-by-line file of functions
 $handle = fopen("sources.txt", "r");
 
-$master = "{\n  \"scope\": [\n  \"text.js - source - meta.tag, punctuation.definition.tag.begin\"\n  ],\n\n  \"completions\": [\n";
+$master = "{\n  \"scope\": [\n  \"source.js\"\n  ],\n\n  \"completions\": [\n";
 
 function getArgs($current)
 {
