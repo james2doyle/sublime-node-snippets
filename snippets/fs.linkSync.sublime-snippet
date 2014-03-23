@@ -1,9 +1,0 @@
-<snippet>
-  <content><![CDATA[
-fs.linkSync(${1:srcpath}, ${2:dstpath})${0}
-]]></content>
-  <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
-  <tabTrigger>fs.linkSync</tabTrigger>
-  <!-- Optional: Set a scope to limit where the snippet will trigger -->
-  <scope>source.js</scope>
-</snippet>

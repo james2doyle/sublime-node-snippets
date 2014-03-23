@@ -1,9 +1,0 @@
-<snippet>
-  <content><![CDATA[
-process.setgid(${1:id})${0}
-]]></content>
-  <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
-  <tabTrigger>process.setgid</tabTrigger>
-  <!-- Optional: Set a scope to limit where the snippet will trigger -->
-  <scope>source.js</scope>
-</snippet>

@@ -4,49 +4,52 @@
  * Convert a source file into sublime snippets
  */
 
+// open our line-by-line file of functions
 $handle = fopen("sources.txt", "r");
 
-function writeSnippet($name, $data)
-{
-  $filename = 'snippets/'.trim($name).'.sublime-snippet';
-  file_put_contents($filename, $data);
-}
+$master = "{\n  \"scope\": [\n  \"text.js - source - meta.tag, punctuation.definition.tag.begin\"\n  ],\n\n  \"completions\": [\n";
 
 function getArgs($current)
 {
+  // turn (one, two, three) into (${1:one}, ${2:two}, ${3:three})
   return preg_replace_callback('/\(([^()]+)\)/i', function($matches) {
     $args = array();
     $parts = explode(',', $matches[1]);
     for ($i=0; $i < count($parts); $i++) {
+      // push the new surrounded argument into an array
       $args[] = '${'.($i + 1).':'.trim($parts[$i]).'}';
     }
+    // join that array with a comma space
     $inside = implode(", ", $args);
-    return '('.$inside.')${0}';
+    return '('.$inside.')';
   }, $current);
 }
 
 function makeTemplate($item) {
-  $name = explode('(', $item)[0];
+  // grab everything before the first paren
+  $name = trim(explode('(', $item)[0]);
+    // get rid of the nasties
     $item = trim($item);
+    // get those surrounded args
     $snips = getArgs($item);
-  $template = "<snippet>
-  <content><![CDATA[
-{$snips}
-]]></content>
-  <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
-  <tabTrigger>{$name}</tabTrigger>
-  <!-- Optional: Set a scope to limit where the snippet will trigger -->
-  <scope>source.js</scope>
-</snippet>";
-writeSnippet($name, $template);
+    // return the nice template
+    return "    { \"trigger\": \"{$name}\", \"contents\": \"{$snips}\${0}\" },\n";
   }
 
   if ($handle) {
+    // read this file line-by-line
     while (($line = fgets($handle)) !== false) {
+      // skip any hash lines
       if (substr_count($line, "#") !== 1) {
-        makeTemplate($line);
+        // add them to our master string
+        $master .= makeTemplate($line);
       }
     }
+    // cap off the end of our array
+    $master .= "  ]\n    }";
+    // write them to our nice new file
+    file_put_contents('node-completions.sublime-completions', $master);
   } else {
+    // shits broke.
     echo "error";
   }

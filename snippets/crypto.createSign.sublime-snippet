@@ -1,9 +1,0 @@
-<snippet>
-  <content><![CDATA[
-crypto.createSign(${1:algorithm})${0}
-]]></content>
-  <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
-  <tabTrigger>crypto.createSign</tabTrigger>
-  <!-- Optional: Set a scope to limit where the snippet will trigger -->
-  <scope>source.js</scope>
-</snippet>

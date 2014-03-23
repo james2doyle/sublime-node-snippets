@@ -1,9 +1,0 @@
-<snippet>
-  <content><![CDATA[
-fs.fsync(${1:fd}, ${2:callback})${0}
-]]></content>
-  <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
-  <tabTrigger>fs.fsync</tabTrigger>
-  <!-- Optional: Set a scope to limit where the snippet will trigger -->
-  <scope>source.js</scope>
-</snippet>

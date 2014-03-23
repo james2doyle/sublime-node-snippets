@@ -1,9 +1,0 @@
-<snippet>
-  <content><![CDATA[
-fs.lchown(${1:path}, ${2:uid}, ${3:gid}, ${4:callback})${0}
-]]></content>
-  <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
-  <tabTrigger>fs.lchown</tabTrigger>
-  <!-- Optional: Set a scope to limit where the snippet will trigger -->
-  <scope>source.js</scope>
-</snippet>

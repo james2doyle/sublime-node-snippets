@@ -1,9 +1,0 @@
-<snippet>
-  <content><![CDATA[
-assert(${1:value}, ${2:message})${0}, assert.ok(${1:value}, ${2:[message]})${0}
-]]></content>
-  <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
-  <tabTrigger>assert</tabTrigger>
-  <!-- Optional: Set a scope to limit where the snippet will trigger -->
-  <scope>source.js</scope>
-</snippet>

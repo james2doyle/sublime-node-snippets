@@ -1,9 +1,0 @@
-<snippet>
-  <content><![CDATA[
-decoder.write(${1:buffer})${0}
-]]></content>
-  <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
-  <tabTrigger>decoder.write</tabTrigger>
-  <!-- Optional: Set a scope to limit where the snippet will trigger -->
-  <scope>source.js</scope>
-</snippet>

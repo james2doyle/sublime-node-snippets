@@ -1,9 +1,0 @@
-<snippet>
-  <content><![CDATA[
-fs.symlinkSync(${1:srcpath}, ${2:dstpath}, ${3:[type]})${0}
-]]></content>
-  <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
-  <tabTrigger>fs.symlinkSync</tabTrigger>
-  <!-- Optional: Set a scope to limit where the snippet will trigger -->
-  <scope>source.js</scope>
-</snippet>

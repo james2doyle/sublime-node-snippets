@@ -1,9 +1,0 @@
-<snippet>
-  <content><![CDATA[
-vm.runInContext(${1:code}, ${2:context}, ${3:[filename]})${0}
-]]></content>
-  <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
-  <tabTrigger>vm.runInContext</tabTrigger>
-  <!-- Optional: Set a scope to limit where the snippet will trigger -->
-  <scope>source.js</scope>
-</snippet>

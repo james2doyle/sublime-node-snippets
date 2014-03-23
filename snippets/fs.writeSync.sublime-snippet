@@ -1,9 +1,0 @@
-<snippet>
-  <content><![CDATA[
-fs.writeSync(${1:fd}, ${2:buffer}, ${3:offset}, ${4:length}, ${5:position})${0}
-]]></content>
-  <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
-  <tabTrigger>fs.writeSync</tabTrigger>
-  <!-- Optional: Set a scope to limit where the snippet will trigger -->
-  <scope>source.js</scope>
-</snippet>
