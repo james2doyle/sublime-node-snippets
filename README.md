@@ -21,6 +21,14 @@ You will have better results if you pretend the period isn't needed. So if you a
 
 ## Snippet Categories
 
+Node Populars
+
+* async
+* underscore
+* lodash
+
+Node Core
+
 * Assert
 * Buffer
 * Child
@@ -78,6 +86,25 @@ This file is cool. It is just a line-by-line output of the node docs functions. 
 Just run `php convert.php` and it will rake the sources.txt file and then write the new snippet in the snippets folder.
 
 Everything before the first `(` will be used as the filename.
+
+## Adding New Snippets
+
+Here is how I quickly got all these snippets. I will use Express as an example since it isn't in here.
+
+First I went to the docs for the framework, and I looked to see what the code examples were wrapped in.
+
+For the express docs site, the codes are show in `section h3` tags. So to quickly get the list, I ran the following code:
+
+```javascript
+var codes = document.querySelectorAll("section h3");
+var items = []
+for (var i = 0; i < codes.length; i++) {
+  items.push(codes[i].textContent);
+}
+items.join("\n");
+```
+
+Then copied the output and pasted it in the sources.txt file. Done!
 
 ## Contributing
 
