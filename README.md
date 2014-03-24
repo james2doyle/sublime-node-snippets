@@ -83,7 +83,7 @@ Is going to get converted to:
 setTimeout(${1:fun}, ${2:delay})${0}
 ```
 
-When the word callback apprears, it will convert it to the standard
+When the word callback appears, it will convert it to the standard
 `fun` snippet.
 
 ```javascript
@@ -93,9 +93,9 @@ fs.readdir(path, callback)
 will become
 
 ```javascript
-fs.readdir(path, function(args){
-  // body
-})
+fs.readdir(${1:path}, function(${2:args}){
+  ${3:// body}
+})${0}
 ```
 
 ## sources.txt
