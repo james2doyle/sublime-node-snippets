@@ -77,6 +77,21 @@ Is going to get converted to:
 setTimeout(${1:fun}, ${2:delay})${0}
 ```
 
+When the word callback apprears, it will convert it to the standard
+`fun` snippet.
+
+```javascript
+fs.readdir(path, callback)
+```
+
+will become
+
+```javascript
+fs.readdir(path, function(args){
+  // body
+})
+```
+
 ## sources.txt
 
 This file is cool. It is just a line-by-line output of the node docs functions. This is the file that is raked over to generate the snippets.
