@@ -5,6 +5,12 @@ The majority of snippets for node 10.26. There are **783** total right now.
 
 ## Installing
 
+#### Package Control
+
+Just look for `sublime-node-snippets` on [Package Control](https://sublime.wbond.net/packages/Node%20Completions). It is called "Node Completions" on the site, but comes up as "sublime-node-snippets".
+
+#### Manual
+
 * Open the Commands Palette (command+shift+p)
 * Package Control: Add Repository
 * Past in this repos URL
