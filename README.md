@@ -106,6 +106,8 @@ items.join("\n");
 
 Then copied the output and pasted it in the sources.txt file. Done!
 
+**The word `callback` will automagically be converted into a function.**
+
 ## Contributing
 
 Just add (or edit) a line in the source file. Then run `php convert.php` to generate the new snippets.
