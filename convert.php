@@ -17,7 +17,12 @@ function getArgs($current)
     $parts = explode(',', $matches[1]);
     for ($i=0; $i < count($parts); $i++) {
       // push the new surrounded argument into an array
-      $args[] = '${'.($i + 1).':'.trim($parts[$i]).'}';
+      $arg = trim($parts[$i]);
+      if ($arg !== 'callback') {
+        $args[] = '${'.($i + 1).':'.trim($parts[$i]).'}';
+      } else {
+        $args[] = 'function(${'.($i + 1).':args}){\n\t${'.($i + 2).':// body}\n}';
+      }
     }
     // join that array with a comma space
     $inside = implode(", ", $args);
