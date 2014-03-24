@@ -96,7 +96,7 @@ fs.readdir(path, function(args){
 
 This file is cool. It is just a line-by-line output of the node docs functions. This is the file that is raked over to generate the snippets.
 
-## Building
+## Running The Build
 
 Just run `php convert.php` and it will rake the sources.txt file and then write the new snippet in the snippets folder.
 
