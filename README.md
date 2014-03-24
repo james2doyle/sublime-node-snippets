@@ -104,19 +104,16 @@ Everything before the first `(` will be used as the filename.
 
 ## Adding New Snippets
 
-Here is how I quickly got all these snippets. I will use Express as an example since it isn't in here.
+Here is how I quickly got all these snippets. I will use [Express](http://expressjs.com/3x/api.html) as an example since it isn't in here.
 
 First I went to the docs for the framework, and I looked to see what the code examples were wrapped in.
 
-For the express docs site, the codes are show in `section h3` tags. So to quickly get the list, I ran the following code:
+For the [express](http://expressjs.com/3x/api.html) docs site, the codes are show in `section h3` tags. So to quickly get the list, I ran the following code:
 
 ```javascript
-var codes = document.querySelectorAll("section h3");
-var items = []
-for (var i = 0; i < codes.length; i++) {
-  items.push(codes[i].textContent);
-}
-items.join("\n");
+Array.prototype.slice.call(document.querySelectorAll("section h3"), 0).map(function(item){
+  return item.textContent.trim();
+}).join("\n");
 ```
 
 Then copied the output and pasted it in the sources.txt file. Done!
