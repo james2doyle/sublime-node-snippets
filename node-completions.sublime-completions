@@ -788,4 +788,4 @@
     { "trigger": "zlib.inflateRaw", "contents": "zlib.inflateRaw(${1:buf}, function(${2:args}){\n\t${3:// body}\n})${0}" },
     { "trigger": "zlib.unzip", "contents": "zlib.unzip(${1:buf}, function(${2:args}){\n\t${3:// body}\n})${0}" },
   ]
-    }
+}
