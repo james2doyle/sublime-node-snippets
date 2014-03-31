@@ -104,7 +104,7 @@ This file is cool. It is just a line-by-line output of the node docs functions. 
 
 ## Running The Build
 
-Just run `php convert.php` and it will rake the sources.txt file and then write the new snippet in the snippets folder.
+Just run `node build.js` and it will rake the sources.txt file and then write the new snippet in the snippets folder.
 
 Everything before the first `(` will be used as the filename.
 
@@ -128,11 +128,7 @@ Then copied the output and pasted it in the sources.txt file. Done!
 
 ## Contributing
 
-Just add (or edit) a line in the source file. Then run `php convert.php` to generate the new snippets.
-
-## Why PHP?!
-
-Well, PHP is actually pretty good at manipulating strings and writing files.
+Just add (or edit) a line in the source file. Then run `node build.js` to generate the new snippets.
 
 ## License
 
