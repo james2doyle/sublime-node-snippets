@@ -46,8 +46,10 @@ fs.readFile('sources.txt', function(err, data) {
       master += makeTemplate(lines[i]);
     }
   }
+  // remove comma from final string
+  master = master.substring(0, master.length - 2);
   // cap off the end
-  master += "  ]\n}";
+  master += "\n  ]\n}";
   // write to file
   fs.writeFile('node-completions.sublime-completions', master, function(err) {
     if(err) throw err;
