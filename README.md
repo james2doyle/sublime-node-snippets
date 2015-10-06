@@ -27,14 +27,6 @@ You will have better results if you pretend the period isn't needed. So if you a
 
 ## Snippet Categories
 
-Node Populars
-
-* async
-* underscore
-* lodash
-
-Node Core
-
 * Assert
 * Buffer
 * Child
