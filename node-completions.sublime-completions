@@ -1,7 +1,5 @@
 {
-  "scope": [
-  "source.js"
-  ],
+  "scope": "source.js",
 
   "completions": [
     { "trigger": "assert.fail", "contents": "assert.fail(${1:actual}, ${2:expected}, ${3:message}, ${4:operator})${0}" },
@@ -501,6 +499,7 @@
     { "trigger": "zlib.gunzip", "contents": "zlib.gunzip(${1:buf}, function(${2:args}){\n\t${3:// body}\n})${0}" },
     { "trigger": "zlib.inflate", "contents": "zlib.inflate(${1:buf}, function(${2:args}){\n\t${3:// body}\n})${0}" },
     { "trigger": "zlib.inflateRaw", "contents": "zlib.inflateRaw(${1:buf}, function(${2:args}){\n\t${3:// body}\n})${0}" },
-    { "trigger": "zlib.unzip", "contents": "zlib.unzip(${1:buf}, function(${2:args}){\n\t${3:// body}\n})${0}" }
+    { "trigger": "zlib.unzip", "contents": "zlib.unzip(${1:buf}, function(${2:args}){\n\t${3:// body}\n})${0}" },
+    { "trigger": "", "contents": "${0}" }
   ]
 }
