@@ -36,7 +36,7 @@ function makeTemplate(line) {
 
 fs.readFile('sources.txt', function(err, data) {
   // start our master string with the opening object and array
-  var master = "{\n  \"scope\": [\n  \"source.js\"\n  ],\n\n  \"completions\": [\n";
+  var master = "{\n  \"scope\": \"source.js\",\n\n  \"completions\": [\n";
   if(err) throw err;
   // split the file into an array of lines
   var lines = data.toString().split("\n");
