@@ -1,135 +1,200 @@
 # assert
-assert.fail(actual, expected, message, operator)
-assert(value, message), assert.ok(value, [message])
-assert.equal(actual, expected, [message])
-assert.notEqual(actual, expected, [message])
+assert(value, [message])
 assert.deepEqual(actual, expected, [message])
-assert.notDeepEqual(actual, expected, [message])
-assert.strictEqual(actual, expected, [message])
-assert.notStrictEqual(actual, expected, [message])
-assert.throws(block, [error], [message])
-assert.doesNotThrow(block, [message])
+assert.deepStrictEqual(actual, expected, [message])
+assert.doesNotThrow(block, [error], [message])
+assert.equal(actual, expected, [message])
+assert.fail(actual, expected, message, operator)
 assert.ifError(value)
+assert.notDeepEqual(actual, expected, [message])
+assert.notDeepStrictEqual(actual, expected, [message])
+assert.notEqual(actual, expected, [message])
+assert.notStrictEqual(actual, expected, [message])
+assert.ok(value, [message])
+assert.strictEqual(actual, expected, [message])
+assert.throws(block, [error], [message])
 # buffer
-Buffer(size)
 Buffer(array)
+Buffer(buffer)
+Buffer(arrayBuffer)
+Buffer(size)
 Buffer(str, [encoding])
-buf.write(string, [offset], [length], [encoding])
-buf.toString([encoding], [start], [end])
-buf.toJSON()
+Buffer.byteLength(string, [encoding])
+Buffer.compare(buf1, buf2)
+Buffer.concat(list, [totalLength])
+Buffer.isBuffer(obj)
+Buffer.isEncoding(encoding)
 buf[index]
+buf.compare(otherBuffer)
+buf.copy(targetBuffer, [targetStart, [sourceStart, [sourceEnd]]])
+buf.entries()
+buf.equals(otherBuffer)
+buf.fill(value, [offset, [end]], [encoding])
+buf.indexOf(value, [byteOffset], [encoding])
+buf.includes(value, [byteOffset], [encoding])
+buf.keys()
 buf.length
-buf.copy(targetBuffer, [targetStart], [sourceStart], [sourceEnd])
-buf.slice([start], [end])
-buf.readUInt8(offset, [noAssert])
-buf.readUInt16LE(offset, [noAssert])
-buf.readUInt16BE(offset, [noAssert])
-buf.readUInt32LE(offset, [noAssert])
-buf.readUInt32BE(offset, [noAssert])
-buf.readInt8(offset, [noAssert])
-buf.readInt16LE(offset, [noAssert])
-buf.readInt16BE(offset, [noAssert])
-buf.readInt32LE(offset, [noAssert])
-buf.readInt32BE(offset, [noAssert])
-buf.readFloatLE(offset, [noAssert])
-buf.readFloatBE(offset, [noAssert])
-buf.readDoubleLE(offset, [noAssert])
 buf.readDoubleBE(offset, [noAssert])
-buf.writeUInt8(value, offset, [noAssert])
-buf.writeUInt16LE(value, offset, [noAssert])
-buf.writeUInt16BE(value, offset, [noAssert])
-buf.writeUInt32LE(value, offset, [noAssert])
-buf.writeUInt32BE(value, offset, [noAssert])
-buf.writeInt8(value, offset, [noAssert])
-buf.writeInt16LE(value, offset, [noAssert])
-buf.writeInt16BE(value, offset, [noAssert])
-buf.writeInt32LE(value, offset, [noAssert])
-buf.writeInt32BE(value, offset, [noAssert])
-buf.writeFloatLE(value, offset, [noAssert])
-buf.writeFloatBE(value, offset, [noAssert])
-buf.writeDoubleLE(value, offset, [noAssert])
+buf.readDoubleLE(offset, [noAssert])
+buf.readFloatBE(offset, [noAssert])
+buf.readFloatLE(offset, [noAssert])
+buf.readInt8(offset, [noAssert])
+buf.readInt16BE(offset, [noAssert])
+buf.readInt16LE(offset, [noAssert])
+buf.readInt32BE(offset, [noAssert])
+buf.readInt32LE(offset, [noAssert])
+buf.readIntBE(offset, byteLength, [noAssert])
+buf.readIntLE(offset, byteLength, [noAssert])
+buf.readUInt8(offset, [noAssert])
+buf.readUInt16BE(offset, [noAssert])
+buf.readUInt16LE(offset, [noAssert])
+buf.readUInt32BE(offset, [noAssert])
+buf.readUInt32LE(offset, [noAssert])
+buf.readUIntBE(offset, byteLength, [noAssert])
+buf.readUIntLE(offset, byteLength, [noAssert])
+buf.slice([start, [end]])
+buf.toString([encoding, [start, [end]]])
+buf.toJSON()
+buf.values()
+buf.write(string, [offset, [length]], [encoding])
 buf.writeDoubleBE(value, offset, [noAssert])
-buf.fill(value, [offset], [end])
+buf.writeDoubleLE(value, offset, [noAssert])
+buf.writeFloatBE(value, offset, [noAssert])
+buf.writeFloatLE(value, offset, [noAssert])
+buf.writeInt8(value, offset, [noAssert])
+buf.writeInt16BE(value, offset, [noAssert])
+buf.writeInt16LE(value, offset, [noAssert])
+buf.writeInt32BE(value, offset, [noAssert])
+buf.writeInt32LE(value, offset, [noAssert])
+buf.writeIntBE(value, offset, byteLength, [noAssert])
+buf.writeIntLE(value, offset, byteLength, [noAssert])
+buf.writeUInt8(value, offset, [noAssert])
+buf.writeUInt16BE(value, offset, [noAssert])
+buf.writeUInt16LE(value, offset, [noAssert])
+buf.writeUInt32BE(value, offset, [noAssert])
+buf.writeUInt32LE(value, offset, [noAssert])
+buf.writeUIntBE(value, offset, byteLength, [noAssert])
+buf.writeUIntLE(value, offset, byteLength, [noAssert])
 buffer.INSPECT_MAX_BYTES
 # child
-child.stdout
-child.stderr
-child.pid
 child.connected
-child.kill([signal])
-child.send(message, [sendHandle])
 child.disconnect()
-child_process.spawn(command, [args], [options])
-child_process.exec(command, [options], callback)
+child.kill([signal])
+child.pid
+child.send(message, [sendHandle], [callback])
+child.stderr
+child.stdin
+child.stdio
+child.stdout
+# child_process
+child_process.exec(command, [options], [callback])
 child_process.execFile(file, [args], [options], [callback])
 child_process.fork(modulePath, [args], [options])
-# console
-console.log([data], [...])
-console.info([data], [...])
-console.error([data], [...])
-console.warn([data], [...])
-console.dir(obj)
-console.time(label)
-console.timeEnd(label)
-console.trace(label)
-console.assert(expression, [message])
+child_process.spawn(command, [args], [options])
+child_process.execFileSync(file, [args], [options])
+child_process.execSync(command, [options])
+child_process.spawnSync(command, [args], [options])
 # cluster
-cluster.settings
+cluster.disconnect([callback])
+cluster.fork([env])
 cluster.isMaster
 cluster.isWorker
+cluster.schedulingPolicy
+cluster.settings
 cluster.setupMaster([settings])
-cluster.fork([env])
-cluster.disconnect([callback])
 cluster.worker
 cluster.workers
-worker.id
-worker.process
-worker.suicide
-worker.send(message, [sendHandle])
-worker.kill([signal='SIGTERM'])
 worker.disconnect()
+worker.id
+worker.isConnected()
+worker.isDead()
+worker.kill([signal='SIGTERM'])
+worker.process
+worker.send(message, [sendHandle], [callback])
+worker.suicide
+# console
+Console(stdout, [stderr])
+console.assert(value, [message], [...])
+console.dir(obj, [options])
+console.error([data], [...])
+console.info([data], [...])
+console.log([data], [...])
+console.time(label)
+console.timeEnd(label)
+console.trace(message, [...])
+console.warn([data], [...])
 # crypto
-crypto.getCiphers()
-crypto.getHashes()
-crypto.createCredentials(details)
-crypto.createHash(algorithm)
-hash.update(data, [input_encoding])
-hash.digest([encoding])
-crypto.createHmac(algorithm, key)
-hmac.update(data)
-hmac.digest([encoding])
-crypto.createCipher(algorithm, password)
-crypto.createCipheriv(algorithm, key, iv)
-cipher.update(data, [input_encoding], [output_encoding])
+crypto.Certificate()
+certificate.exportChallenge(spkac)
+Certificate.exportPublicKey(spkac)
+Certificate.verifySpkac(spkac)
+Cipher
 cipher.final([output_encoding])
+cipher.setAAD(buffer)
+cipher.getAuthTag()
 cipher.setAutoPadding(auto_padding=true)
-crypto.createDecipher(algorithm, password)
-crypto.createDecipheriv(algorithm, key, iv)
-decipher.update(data, [input_encoding], [output_encoding])
+cipher.update(data, [input_encoding], [output_encoding])
+Decipher
 decipher.final([output_encoding])
+decipher.setAAD(buffer)
+decipher.setAuthTag(buffer)
 decipher.setAutoPadding(auto_padding=true)
-crypto.createSign(algorithm)
-sign.update(data)
+decipher.update(data, [input_encoding], [output_encoding])
+DiffieHellman
+diffieHellman.computeSecret(other_public_key, [input_encoding], [output_encoding])
+diffieHellman.generateKeys([encoding])
+diffieHellman.getGenerator([encoding])
+diffieHellman.getPrime([encoding])
+diffieHellman.getPrivateKey([encoding])
+diffieHellman.getPublicKey([encoding])
+diffieHellman.setPrivateKey(private_key, [encoding])
+diffieHellman.setPublicKey(public_key, [encoding])
+diffieHellman.verifyError
+ECDH
+ECDH.computeSecret(other_public_key, [input_encoding], [output_encoding])
+ECDH.generateKeys([encoding, [format]])
+ECDH.getPrivateKey([encoding])
+ECDH.getPublicKey([encoding, [format]])
+ECDH.setPrivateKey(private_key, [encoding])
+ECDH.setPublicKey(public_key, [encoding])
+Hash
+hash.digest([encoding])
+hash.update(data, [input_encoding])
+Hmac
+hmac.digest([encoding])
+hmac.update(data)
+Sign
 sign.sign(private_key, [output_format])
-crypto.createVerify(algorithm)
+sign.update(data)
+Verify
 verifier.update(data)
 verifier.verify(object, signature, [signature_format])
-crypto.createDiffieHellman(prime_length)
-crypto.createDiffieHellman(prime, [encoding])
-diffieHellman.generateKeys([encoding])
-diffieHellman.computeSecret(other_public_key, [input_encoding], [output_encoding])
-diffieHellman.getPrime([encoding])
-diffieHellman.getGenerator([encoding])
-diffieHellman.getPublicKey([encoding])
-diffieHellman.getPrivateKey([encoding])
-diffieHellman.setPublicKey(public_key, [encoding])
-diffieHellman.setPrivateKey(private_key, [encoding])
-crypto.getDiffieHellman(group_name)
-crypto.pbkdf2(password, salt, iterations, keylen, callback)
-crypto.pbkdf2Sync(password, salt, iterations, keylen)
-crypto.randomBytes(size, [callback])
-crypto.pseudoRandomBytes(size, [callback])
+crypto module methods and properties
 crypto.DEFAULT_ENCODING
+crypto.createCipher(algorithm, password)
+crypto.createCipheriv(algorithm, key, iv)
+crypto.createCredentials(details)
+crypto.createDecipher(algorithm, password)
+crypto.createDecipheriv(algorithm, key, iv)
+crypto.createDiffieHellman(prime, [prime_encoding], [generator], [generator_encoding])
+crypto.createDiffieHellman(prime_length, [generator])
+crypto.createECDH(curve_name)
+crypto.createHash(algorithm)
+crypto.createHmac(algorithm, key)
+crypto.createSign(algorithm)
+crypto.createVerify(algorithm)
+crypto.getCiphers()
+crypto.getCurves()
+crypto.getDiffieHellman(group_name)
+crypto.getHashes()
+crypto.pbkdf2(password, salt, iterations, keylen, [digest], callback)
+crypto.pbkdf2Sync(password, salt, iterations, keylen, [digest])
+crypto.privateDecrypt(private_key, buffer)
+crypto.privateEncrypt(private_key, buffer)
+crypto.publicDecrypt(public_key, buffer)
+crypto.publicEncrypt(public_key, buffer)
+crypto.randomBytes(size, [callback])
+crypto.setEngine(engine, [flags])
 # decoder
 decoder.write(buffer)
 decoder.end()
@@ -145,142 +210,138 @@ domain.enter()
 domain.exit()
 domain.dispose()
 # dns
-dns.lookup(domain, [family], callback)
-dns.resolve(domain, [rrtype], callback)
-dns.resolve4(domain, callback)
-dns.resolve6(domain, callback)
-dns.resolveMx(domain, callback)
-dns.resolveTxt(domain, callback)
-dns.resolveSrv(domain, callback)
-dns.resolveNs(domain, callback)
-dns.resolveCname(domain, callback)
+dns.getServers()
+dns.lookup(hostname, [options], callback)
+dns.lookupService(address, port, callback)
+dns.resolve(hostname, [rrtype], callback)
+dns.resolve4(hostname, callback)
+dns.resolve6(hostname, callback)
+dns.resolveCname(hostname, callback)
+dns.resolveMx(hostname, callback)
+dns.resolveNs(hostname, callback)
+dns.resolveSoa(hostname, callback)
+dns.resolveSrv(hostname, callback)
+dns.resolveTxt(hostname, callback)
 dns.reverse(ip, callback)
+dns.setServers(servers)
+# domain
+Domain
+domain.run(fn, [arg], [...])
+domain.members
+domain.add(emitter)
+domain.remove(emitter)
+domain.bind(callback)
+domain.intercept(callback)
+domain.enter()
+domain.exit()
+domain.dispose()
+# error
+Error(message)
+Error.captureStackTrace(targetObject, [constructorOpt])
+Error.stackTraceLimit
+error.message
+error.stack
+error.code
+error.errno
+error.syscall
 # event
+EventEmitter
+EventEmitter.listenerCount(emitter, event)
+EventEmitter.defaultMaxListeners
 emitter.addListener(event, listener)
+emitter.emit(event, [arg1], [arg2], [...])
+emitter.getMaxListeners()
+emitter.listenerCount(event)
+emitter.listeners(event)
 emitter.on(event, listener)
 emitter.once(event, listener)
-emitter.removeListener(event, listener)
 emitter.removeAllListeners([event])
+emitter.removeListener(event, listener)
 emitter.setMaxListeners(n)
-emitter.listeners(event)
-emitter.emit(event, [arg1], [arg2], [...])
-# http
-http.STATUS_CODES
-http.createServer([requestListener])
-http.createClient([port], [host])
-server.listen(port, [hostname], [backlog], [callback])
-server.listen(path, [callback])
-server.listen(handle, [callback])
-server.close([callback])
-server.maxHeadersCount
-server.setTimeout(msecs, callback)
-server.timeout
-response.writeContinue()
-response.writeHead(statusCode, [reasonPhrase], [headers])
-response.setTimeout(msecs, callback)
-response.statusCode
-response.setHeader(name, value)
-response.headersSent
-response.sendDate
-response.getHeader(name)
-response.removeHeader(name)
-response.write(chunk, [encoding])
-response.addTrailers(headers)
-response.end([data], [encoding])
-http.request(options, [callback])
-http.get(options, [callback])
-agent.maxSockets
-agent.sockets
-agent.requests
-http.globalAgent
-request.write(chunk, [encoding])
-request.end([data], [encoding])
-request.abort()
-request.setTimeout(timeout, [callback])
-request.setNoDelay([noDelay])
-request.setSocketKeepAlive([enable], [initialDelay])
-http.IncomingMessage
-message.httpVersion
-message.headers
-message.trailers
-message.setTimeout(msecs, callback)
-message.method
-message.url
-message.statusCode
-message.socket
-# https
-https.createServer(options, [requestListener])
-https.request(options, callback)
-https.get(options, callback)
-https.globalAgent
 # fs
-fs.rename(oldPath, newPath, callback)
-fs.renameSync(oldPath, newPath)
-fs.ftruncate(fd, len, callback)
-fs.ftruncateSync(fd, len)
-fs.truncate(path, len, callback)
-fs.truncateSync(path, len)
-fs.chown(path, uid, gid, callback)
-fs.chownSync(path, uid, gid)
-fs.fchown(fd, uid, gid, callback)
-fs.fchownSync(fd, uid, gid)
-fs.lchown(path, uid, gid, callback)
-fs.lchownSync(path, uid, gid)
+fs.FSWatcher
+watcher.close()
+fs.ReadStream
+readStream.path
+fs.Stats
+fs.WriteStream
+writeStream.bytesWritten
+writeStream.path
+fs.F_OK
+fs.R_OK
+fs.W_OK
+fs.X_OK
+fs.access(path, [mode], callback)
+fs.accessSync(path, [mode])
+fs.appendFile(file, data, [options], callback)
+fs.appendFileSync(file, data, [options])
 fs.chmod(path, mode, callback)
 fs.chmodSync(path, mode)
+fs.chown(path, uid, gid, callback)
+fs.chownSync(path, uid, gid)
+fs.close(fd, callback)
+fs.closeSync(fd)
+fs.createReadStream(path, [options])
+fs.createWriteStream(path, [options])
+fs.exists(path, callback)
+fs.existsSync(path)
 fs.fchmod(fd, mode, callback)
 fs.fchmodSync(fd, mode)
+fs.fchown(fd, uid, gid, callback)
+fs.fchownSync(fd, uid, gid)
+fs.fstat(fd, callback)
+fs.fstatSync(fd)
+fs.fsync(fd, callback)
+fs.fsyncSync(fd)
+fs.ftruncate(fd, len, callback)
+fs.ftruncateSync(fd, len)
+fs.futimes(fd, atime, mtime, callback)
+fs.futimesSync(fd, atime, mtime)
 fs.lchmod(path, mode, callback)
 fs.lchmodSync(path, mode)
-fs.stat(path, callback)
-fs.lstat(path, callback)
-fs.fstat(fd, callback)
-fs.statSync(path)
-fs.lstatSync(path)
-fs.fstatSync(fd)
+fs.lchown(path, uid, gid, callback)
+fs.lchownSync(path, uid, gid)
 fs.link(srcpath, dstpath, callback)
 fs.linkSync(srcpath, dstpath)
-fs.symlink(srcpath, dstpath, [type], callback)
-fs.symlinkSync(srcpath, dstpath, [type])
+fs.lstat(path, callback)
+fs.lstatSync(path)
+fs.mkdir(path, [mode], callback)
+fs.mkdirSync(path, [mode])
+fs.open(path, flags, [mode], callback)
+fs.openSync(path, flags, [mode])
+fs.read(fd, buffer, offset, length, position, callback)
+fs.readdir(path, callback)
+fs.readdirSync(path)
+fs.readFile(file, [options], callback)
+fs.readFileSync(file, [options])
 fs.readlink(path, callback)
 fs.readlinkSync(path)
 fs.realpath(path, [cache], callback)
+fs.readSync(fd, buffer, offset, length, position)
 fs.realpathSync(path, [cache])
-fs.unlink(path, callback)
-fs.unlinkSync(path)
+fs.rename(oldPath, newPath, callback)
+fs.renameSync(oldPath, newPath)
 fs.rmdir(path, callback)
 fs.rmdirSync(path)
-fs.mkdir(path, [mode], callback)
-fs.mkdirSync(path, [mode])
-fs.readdir(path, callback)
-fs.readdirSync(path)
-fs.close(fd, callback)
-fs.closeSync(fd)
-fs.open(path, flags, [mode], callback)
-fs.openSync(path, flags, [mode])
+fs.stat(path, callback)
+fs.statSync(path)
+fs.symlink(target, path, [type], callback)
+fs.symlinkSync(target, path, [type])
+fs.truncate(path, len, callback)
+fs.truncateSync(path, len)
+fs.unlink(path, callback)
+fs.unlinkSync(path)
+fs.unwatchFile(filename, [listener])
 fs.utimes(path, atime, mtime, callback)
 fs.utimesSync(path, atime, mtime)
-fs.futimes(fd, atime, mtime, callback)
-fs.futimesSync(fd, atime, mtime)
-fs.fsync(fd, callback)
-fs.fsyncSync(fd)
-fs.write(fd, buffer, offset, length, position, callback)
-fs.writeSync(fd, buffer, offset, length, position)
-fs.read(fd, buffer, offset, length, position, callback)
-fs.readSync(fd, buffer, offset, length, position)
-fs.readFile(filename, [options], callback)
-fs.readFileSync(filename, [options])
-fs.writeFile(filename, data, [options], callback)
-fs.writeFileSync(filename, data, [options])
-fs.appendFile(filename, data, [options], callback)
-fs.appendFileSync(filename, data, [options])
-fs.watchFile(filename, [options], listener)
-fs.unwatchFile(filename, [listener])
 fs.watch(filename, [options], [listener])
-fs.exists(path, callback)
-fs.existsSync(path)
-fs.createReadStream(path, [options])
-fs.createWriteStream(path, [options])
+fs.watchFile(filename, [options], listener)
+fs.write(fd, buffer, offset, length, [position], callback)
+fs.write(fd, data, [position, [encoding]], callback)
+fs.writeFile(file, data, [options], callback)
+fs.writeFileSync(file, data, [options])
+fs.writeSync(fd, buffer, offset, length, [position])
+fs.writeSync(fd, data, [position, [encoding]])
 file.bytesWritten
 stats.isFile()
 stats.isDirectory()
@@ -291,239 +352,450 @@ stats.isFIFO()
 stats.isSocket()
 watcher.close()
 # global
+__dirname
+__filename
+clearInterval(t)
+clearTimeout(t)
+exports
 global
+module
+process
 require()
-require.resolve()
 require.cache
 require.extensions
-__filename
-__dirname
-setTimeout(cb, ms)
-clearTimeout(t)
+require.resolve()
 setInterval(cb, ms)
-clearInterval(t)
+setTimeout(cb, ms)
+# http
+http.Agent
+Agent([options])
+agent.createConnection(options, [callback])
+agent.destroy()
+agent.freeSockets
+agent.getName(options)
+agent.maxFreeSockets
+agent.maxSockets
+agent.requests
+agent.sockets
+http.ClientRequest
+request.abort()
+request.end([data], [encoding], [callback])
+request.flushHeaders()
+request.setNoDelay([noDelay])
+request.setSocketKeepAlive([enable], [initialDelay])
+request.setTimeout(timeout, [callback])
+request.write(chunk, [encoding], [callback])
+http.Server
+server.close([callback])
+server.listen(handle, [callback])
+server.listen(path, [callback])
+server.listen(port, [hostname], [backlog], [callback])
+server.listening
+server.maxHeadersCount
+server.setTimeout(msecs, callback)
+server.timeout
+http.ServerResponse
+response.addTrailers(headers)
+response.end([data], [encoding], [callback])
+response.finished
+response.getHeader(name)
+response.headersSent
+response.removeHeader(name)
+response.sendDate
+response.setHeader(name, value)
+response.setTimeout(msecs, callback)
+response.statusCode
+response.statusMessage
+response.write(chunk, [encoding], [callback])
+response.writeContinue()
+response.writeHead(statusCode, [statusMessage], [headers])
+http.IncomingMessage
+message.headers
+message.httpVersion
+message.method
+message.rawHeaders
+message.rawTrailers
+message.setTimeout(msecs, callback)
+message.statusCode
+message.statusMessage
+message.socket
+message.trailers
+message.url
+http.METHODS
+http.STATUS_CODES
+http.createClient([port], [host])
+http.createServer([requestListener])
+http.get(options, [callback])
+http.globalAgent
+http.request(options, [callback])
+# https
+https.Agent
+https.Server
+server.setTimeout(msecs, callback)
+server.timeout
+https.createServer(options, [requestListener])
+server.close([callback])
+server.listen(handle, [callback])
+server.listen(path, [callback])
+server.listen(port, [host], [backlog], [callback])
+https.get(options, callback)
+https.globalAgent
+https.request(options, callback)
 # module
+module.children
 module.exports
-module.require(id)
-module.id
 module.filename
+module.id
 module.loaded
 module.parent
-module.children
+module.require(id)
 # net
-net.createServer([options], [connectionListener])
-net.connect(options, [connectionListener])
-net.createConnection(options, [connectionListener])
-net.connect(port, [host], [connectListener])
-net.createConnection(port, [host], [connectListener])
-net.connect(path, [connectListener])
-net.createConnection(path, [connectListener])
-server.listen(port, [host], [backlog], [callback])
-server.listen(path, [callback])
-server.listen(handle, [callback])
-server.close([callback])
+net.Server
 server.address()
-server.unref()
-server.ref()
-server.maxConnections
+server.close([callback])
 server.connections
 server.getConnections(callback)
-net.Socket([options])
-socket.connect(port, [host], [connectListener])
-socket.connect(path, [connectListener])
-socket.bufferSize
-socket.setEncoding([encoding])
-socket.write(data, [encoding], [callback])
-socket.end([data], [encoding])
-socket.destroy()
-socket.pause()
-socket.resume()
-socket.setTimeout(timeout, [callback])
-socket.setNoDelay([noDelay])
-socket.setKeepAlive([enable], [initialDelay])
+server.listen(handle, [backlog], [callback])
+server.listen(options, [callback])
+server.listen(path, [backlog], [callback])
+server.listen(port, [hostname], [backlog], [callback])
+server.listening
+server.maxConnections
+server.ref()
+server.unref()
+net.Socket
+new net.Socket([options])
 socket.address()
-socket.unref()
-socket.ref()
-socket.remoteAddress
-socket.remotePort
-socket.localAddress
-socket.localPort
+socket.bufferSize
 socket.bytesRead
 socket.bytesWritten
+socket.connect(options, [connectListener])
+socket.connect(path, [connectListener])
+socket.connect(port, [host], [connectListener])
+socket.destroy()
+socket.end([data], [encoding])
+socket.localAddress
+socket.localPort
+socket.pause()
+socket.ref()
+socket.remoteAddress
+socket.remoteFamily
+socket.remotePort
+socket.resume()
+socket.setEncoding([encoding])
+socket.setKeepAlive([enable], [initialDelay])
+socket.setNoDelay([noDelay])
+socket.setTimeout(timeout, [callback])
+socket.unref()
+socket.write(data, [encoding], [callback])
+net.connect(options, [connectListener])
+net.connect(path, [connectListener])
+net.connect(port, [host], [connectListener])
+net.createConnection(options, [connectListener])
+net.createConnection(path, [connectListener])
+net.createConnection(port, [host], [connectListener])
+net.createServer([options], [connectionListener])
 net.isIP(input)
 net.isIPv4(input)
 net.isIPv6(input)
+# os
+os.EOL
+os.arch()
+os.cpus()
+os.endianness()
+os.freemem()
+os.homedir()
+os.hostname()
+os.loadavg()
+os.networkInterfaces()
+os.platform()
+os.release()
+os.tmpdir()
+os.totalmem()
+os.type()
+os.uptime()
 # path
-path.join([path1], [path2], [...])
-path.resolve([from ...], to)
-path.relative(from, to)
-path.dirname(p)
 path.basename(p, [ext])
-path.extname(p)process.stdout
+path.delimiter
+path.dirname(p)
+path.extname(p)
+path.format(pathObject)
+path.isAbsolute(path)
+path.join([path1], [path2], [...])
+path.normalize(p)
+path.parse(pathString)
+path.posix
+path.relative(from, to)
+path.resolve([from ...], to)
+path.sep
+path.win32
+# process
+process.abort()
+process.arch
+process.argv
+process.chdir(directory)
+process.config
+process.connected
+process.cwd()
+process.disconnect()
+process.env
+process.execArgv
+process.execPath
+process.exit([code])
+process.exitCode
+process.getegid()
+process.geteuid()
+process.getgid()
+process.getgroups()
+process.getuid()
+process.hrtime()
+process.initgroups(user, extra_group)
+process.kill(pid, [signal])
+process.mainModule
+process.memoryUsage()
+process.nextTick(callback, [arg], [...])
+process.pid
+process.platform
+process.release
+process.send(message, [sendHandle], [callback])
+process.setegid(id)
+process.seteuid(id)
+process.setgid(id)
+process.setgroups(groups)
+process.setuid(id)
+process.stderr
+process.stdin
+process.stdout
+process.title
+process.umask([mask])
+process.uptime()
+process.version
+process.versions
 # punnycode
+punycode
 punycode.decode(string)
 punycode.encode(string)
-punycode.toUnicode(domain)
 punycode.toASCII(domain)
+punycode.toUnicode(domain)
 punycode.ucs2
 punycode.ucs2.decode(string)
 punycode.ucs2.encode(codePoints)
 punycode.version
-# process
-process.stderr
-process.stdin
-process.argv
-process.execPath
-process.execArgv
-process.abort()
-process.chdir(directory)
-process.cwd()
-process.env
-process.exit([code])
-process.getgid()
-process.setgid(id)
-process.getuid()
-process.setuid(id)
-process.getgroups()
-process.setgroups(groups)
-process.initgroups(user, extra_group)
-process.version
-process.versions
-process.config
-process.kill(pid, [signal])
-process.pid
-process.title
-process.arch
-process.platform
-process.memoryUsage()
-process.nextTick(callback)
-process.maxTickDepth
-process.umask([mask])
-process.uptime()
-process.hrtime()util.format(format, [...])
 # querystring
-querystring.stringify(obj, [sep], [eq])
-querystring.parse(str, [sep], [eq], [options])
 querystring.escape
+querystring.parse(str, [sep], [eq], [options])
+querystring.stringify(obj, [sep], [eq], [options])
 querystring.unescape
 # readline
-readline.createInterface(options)
-rl.setPrompt(prompt, length)
+readline.createInterface(ops)
+rl.close()
+rl.pause()
 rl.prompt([preserveCursor])
 rl.question(query, callback)
-rl.pause()
 rl.resume()
-rl.close()
+rl.setPrompt(prompt)
 rl.write(data, [key])
-readline.cursorTo(stream, x, y)
-readline.moveCursor(stream, dx, dy)
 readline.clearLine(stream, dir)
 readline.clearScreenDown(stream)
+readline.createInterface(options)
+readline.cursorTo(stream, x, y)
+readline.moveCursor(stream, dx, dy)
 # repl
+replServer.defineCommand(keyword, cmd)
+replServer.displayPrompt([preserveCursor])
+repl
 repl.start(options)
+# stream
+stream.Duplex
+stream.Readable
+stream.Transform
+stream.Writable([options])
+stream.Duplex(options)
+stream.PassThrough
+stream.Readable
+stream.Readable([options])
+stream.Transform([options])
+stream.read(0)
+stream.push('')
+readable._read(size)
+readable.push(chunk, [encoding])
+writable.cork()
+writable.end([chunk], [encoding], [callback])
+writable.setDefaultEncoding(encoding)
+writable.uncork()
+writable.write(chunk, [encoding], [callback])
+writable._write(chunk, encoding, callback)
+writable._writev(chunks, callback)
+readable.isPaused()
+readable.pause()
+readable.pipe(destination, [options])
+readable.read([size])
+readable.resume()
+readable.setEncoding(encoding)
+readable.unpipe([destination])
+readable.unshift(chunk)
+readable.wrap(stream)
+# string decoder
+StringDecoder
+decoder.end()
+decoder.write(buffer)
 # timers
-setTimeout(callback, delay, [arg], [...])
-clearTimeout(timeoutObject)
-setInterval(callback, delay, [arg], [...])
+clearImmediate(immediateObject)
 clearInterval(intervalObject)
-unref()
+clearTimeout(timeoutObject)
 ref()
 setImmediate(callback, [arg], [...])
-clearImmediate(immediateObject)
+setInterval(callback, delay, [arg], [...])
+setTimeout(callback, delay, [arg], [...])
+unref()
 # tls ssl
-tls.getCiphers()
-tls.createServer(options, [secureConnectionListener])
-tls.SLAB_BUFFER_SIZE
+CryptoStream
+cryptoStream.bytesWritten
+SecurePair
+server.addContext(hostname, context)
+server.address()
+server.close([callback])
+server.connections
+server.getTicketKeys()
+server.listen(port, [hostname], [callback])
+server.setTicketKeys(keys)
+server.maxConnections
+tls.TLSSocket(socket, [options])
+tlsSocket
+tlsSocket.address()
+tlsSocket.authorized
+tlsSocket.authorizationError
+tlsSocket.encrypted
+tlsSocket.getCipher()
+tlsSocket.getEphemeralKeyInfo()
+tlsSocket.getPeerCertificate([ detailed ])
+tlsSocket.getProtocol()
+tlsSocket.getSession()
+tlsSocket.getTLSTicket()
+tlsSocket.localAddress
+tlsSocket.localPort
+tlsSocket.remoteAddress
+tlsSocket.remoteFamily
+tlsSocket.remotePort
+tlsSocket.renegotiate(options, callback)
+tlsSocket.setMaxSendFragment(size)
+tls
 tls.connect(options, [callback])
 tls.connect(port, [host], [options], [callback])
-tls.createSecurePair([credentials], [isServer], [requestCert], [rejectUnauthorized])
-server.listen(port, [host], [callback])
-server.close()
-server.address()
-server.addContext(hostname, credentials)
-server.maxConnections
-server.connections
-cryptoStream.bytesWritten
-cleartextStream.authorized
-cleartextStream.authorizationError
-cleartextStream.getPeerCertificate()
-cleartextStream.getCipher()
-cleartextStream.address()
-cleartextStream.remoteAddress
-cleartextStream.remotePort
+tls.createSecureContext(details)
+tls.createSecurePair([context], [isServer], [requestCert], [rejectUnauthorized], [options])
+tls.createServer(options, [secureConnectionListener])
+tls.getCiphers()
 # tty
-tty.isatty(fd)
-tty.setRawMode(mode)
+ReadStream
+rs
 rs.isRaw
 rs.setRawMode(mode)
+WriteStream
+ws
 ws.columns
 ws.rows
-# udp
+tty
+tty.isatty(fd)
+tty.setRawMode(mode)
+# udp/datagram
+dgram
+dgram.Socket
+dgram.createSocket(options, [callback])
 dgram.createSocket(type, [callback])
-socket.send(buf, offset, length, port, address, [callback])
-socket.bind(port, [address], [callback])
-socket.close()
-socket.address()
-socket.setBroadcast(flag)
-socket.setTTL(ttl)
-socket.setMulticastTTL(ttl)
-socket.setMulticastLoopback(flag)
 socket.addMembership(multicastAddress, [multicastInterface])
+socket.address()
+socket.bind([port], [address], [callback])
+socket.bind(options, [callback])
+socket.close([callback])
 socket.dropMembership(multicastAddress, [multicastInterface])
-socket.unref()
+socket.send(msg, [offset, length,] port, address, [callback])
+socket.setBroadcast(flag)
+socket.setMulticastLoopback(flag)
+socket.setMulticastTTL(ttl)
+socket.setTTL(ttl)
 socket.ref()
+socket.unref()
+# url
+url
+url.format(urlObj)
+url.parse(urlStr, [parseQueryString], [slashesDenoteHost])
+url.resolve(from, to)
 # util
+util
 util.debug(string)
+util.debuglog(section)
+util.deprecate(function, string)
 util.error([...])
-util.puts([...])
-util.print([...])
-util.log(string)
+util.format(format, [...])
+util.inherits(constructor, superConstructor)
 util.inspect(object, [options])
 util.isArray(object)
-util.isRegExp(object)
+util.isBoolean(object)
+util.isBuffer(object)
 util.isDate(object)
 util.isError(object)
+util.isFunction(object)
+util.isNull(object)
+util.isNullOrUndefined(object)
+util.isNumber(object)
+util.isObject(object)
+util.isPrimitive(object)
+util.isRegExp(object)
+util.isString(object)
+util.isSymbol(object)
+util.isUndefined(object)
+util.log(string)
+util.print([...])
 util.pump(readableStream, writableStream, [callback])
-util.inherits(constructor, superConstructor)url.parse(urlStr, [parseQueryString], [slashesDenoteHost])
-# url
-url.format(urlObj)
-url.resolve(from, to)os.tmpdir()
-# os
-os.endianness()
-os.hostname()
-os.type()
-os.platform()
-os.arch()
-os.release()
-os.uptime()
-os.loadavg()
-os.totalmem()
-os.freemem()
-os.cpus()
-os.networkInterfaces()
-os.EOLchild.stdin
+util.puts([...])
+# v8
+v8
+v8.getHeapStatistics()
+v8.getHeapSpaceStatistics()
+v8.setFlagsFromString(string)
 # vm
-vm.runInThisContext(code, [filename])
-vm.runInNewContext(code, [sandbox], [filename])
-vm.runInContext(code, context, [filename])
-vm.createContext([initSandbox])
-vm.createScript(code, [filename])
-script.runInThisContext()
-script.runInNewContext([sandbox])
+vm.Script(code, options)
+script.runInContext(contextifiedSandbox, [options])
+script.runInNewContext([sandbox], [options])
+script.runInThisContext([options])
+vm.createContext([sandbox])
+vm.isContext(sandbox)
+vm.runInContext(code, contextifiedSandbox, [options])
+vm.runInDebugContext(code)
+vm.runInNewContext(code, [sandbox], [options])
+vm.runInThisContext(code, [options])
 # zlib
-zlib.createGzip([options])
-zlib.createGunzip([options])
+zlib
+zlib.Deflate
+zlib.DeflateRaw
+zlib.Gunzip
+zlib.Gzip
+zlib.Inflate
+zlib.InflateRaw
+zlib.Unzip
+zlib.Zlib
+zlib.flush([kind], callback)
+zlib.params(level, strategy, callback)
+zlib.reset()
 zlib.createDeflate([options])
-zlib.createInflate([options])
 zlib.createDeflateRaw([options])
+zlib.createGunzip([options])
+zlib.createGzip([options])
+zlib.createInflate([options])
 zlib.createInflateRaw([options])
 zlib.createUnzip([options])
-zlib.flush(callback)
-zlib.reset()
-zlib.deflate(buf, callback)
-zlib.deflateRaw(buf, callback)
-zlib.gzip(buf, callback)
-zlib.gunzip(buf, callback)
-zlib.inflate(buf, callback)
-zlib.inflateRaw(buf, callback)
-zlib.unzip(buf, callback)
+zlib.deflate(buf, [options], callback)
+zlib.deflateRaw(buf, [options], callback)
+zlib.deflateRawSync(buf, [options])
+zlib.deflateSync(buf, [options])
+zlib.gunzip(buf, [options], callback)
+zlib.gunzipSync(buf, [options])
+zlib.gzip(buf, [options], callback)
+zlib.gzipSync(buf, [options])
+zlib.inflate(buf, [options], callback)
+zlib.inflateRaw(buf, [options], callback)
+zlib.inflateRawSync(buf, [options])
+zlib.inflateSync(buf, [options])
+zlib.unzip(buf, [options], callback)
+zlib.unzipSync(buf, [options])

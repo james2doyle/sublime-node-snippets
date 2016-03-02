@@ -1,7 +1,7 @@
 sublime-node-snippets
 =====================
 
-The majority of snippets for node 10.26. There are **783** total right now.
+The majority of snippets for [node *v5.x*](https://nodejs.org/dist/latest-v5.x/docs/api/). There are **768** total right now.
 
 ## Installing
 
@@ -27,37 +27,41 @@ You will have better results if you pretend the period isn't needed. So if you a
 
 ## Snippet Categories
 
-* Assert
+* Assertion Testing
 * Buffer
-* Child
-* Console
+* Child Processes
 * Cluster
+* Console
 * Crypto
-* Decoder
+* Debugger
+* DNS
 * Domain
-* Dns
-* Event
-* Http
-* Https
-* Fs
-* Global
-* Module
+* Errors
+* Events
+* File System
+* Globals
+* HTTP
+* HTTPS
+* Modules
 * Net
+* OS
 * Path
-* Punnycode
 * Process
-* Querystring
+* Punycode
+* Query Strings
 * Readline
-* Repl
+* REPL
+* Stream
+* String Decoder
 * Timers
-* Tls Ssl
-* Tty
-* Udp
-* Util
-* Url
-* Os
-* Vm
-* Zlib
+* TLS/SSL
+* TTY
+* UDP/Datagram
+* URL
+* Utilities
+* V8
+* VM
+* ZLIB
 
 ## Building
 
