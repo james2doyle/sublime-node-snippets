@@ -7,7 +7,7 @@ The majority of snippets for [node *v5.x*](https://nodejs.org/dist/latest-v5.x/d
 
 #### Package Control
 
-Just look for `sublime-node-snippets` on [Package Control](https://sublime.wbond.net/packages/Node%20Completions). It is called "Node Completions" on the site, but comes up as "sublime-node-snippets".
+Just look for `Node Completions` on [Package Control](https://sublime.wbond.net/packages/Node%20Completions).
 
 #### Manual
 
