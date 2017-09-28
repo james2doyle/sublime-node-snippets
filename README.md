@@ -1,7 +1,7 @@
 sublime-node-snippets
 =====================
 
-The majority of snippets for [node *v5.x*](https://nodejs.org/dist/latest-v5.x/docs/api/). There are **768** total right now.
+The majority of snippets for [node *v8.x*](https://nodejs.org/dist/latest-v8.x/docs/api/). There are **1083** total right now.
 
 ## Installing
 
@@ -33,7 +33,6 @@ You will have better results if you pretend the period isn't needed. So if you a
 * Cluster
 * Console
 * Crypto
-* Debugger
 * DNS
 * Domain
 * Errors
@@ -41,11 +40,14 @@ You will have better results if you pretend the period isn't needed. So if you a
 * File System
 * Globals
 * HTTP
+* HTTP/2
 * HTTPS
+* Inspector
 * Modules
 * Net
 * OS
 * Path
+* Performance Hooks
 * Process
 * Punycode
 * Query Strings
